@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refress" content="30">
+    <meta name="keywords" content="HTML, CSS, W3.CSS">
+    <meta name="description" content="Math Practice for kids in primary school">
+    <title>Primary Math Practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        let sum;
+        function showRandom() {
+            let num1 = Math.round(Math.random() * 100);
+            let num2 = Math.round(Math.random() * 100);
+            sum = num1 + num2;
+            document.getElementById("randomNumberDisplay1").innerHTML = num1 + " and " + num2;
+        }
+
+        function showSum() {
+            document.getElementById("showSumButton").innerHTML = "=" + sum;
+            documet.getElementById("tryAgainButton").style.display = 'block';
+        }
+        function tryAgain() {
+            document.getElementById('sum').style.display = 'block';
+            showRandom();
+            document.getElementById("showSumButton").innerHTML = 'Show Sum';
+            document.getElementById("sumDisplay").innerHTML = "Sum=?"
+        }
+    </script>
+</head>
+
+<body>
+    <div style="background-color: lightgray">
+        <div id="page_header" class="w3-container w3-teal w3-center ">
+            <h1 id="header_name">Hey Kids, get ready for some math practice</h1>
+        </div>
+        <div class="w3-bar w3-light-gray w3-large">
+            <a href="#" class="w3-bar-item w3-button w3-hover-green">
+                <i class="fa fa-home"></i>
+            </a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green" onclick="document.getElementById('sum').style.display='block'">Sum</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green">Multiply</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green">Substract</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green">Devide</a>
+            <div class="w3-dropdown-hover">
+                <button class="w3-button" title="More">More
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#" class="w3-bar-item w3-button w3-hover-green">None</a>
+                </div>
+            </div>
+            <input type=text class="w3-bar-item w3-input" placeholder="serach..">
+            <a href="#" class="w3-bar-tem w3-button w3-hover-green">Go</a>
+        </div>
+
+        <div id="sum"  background-color="#00cc00" class="w3-panel w3-display-container">
+            <div id="randomNumberDisplay" class="w3-panel w3-light-gray w3-display-container">
+                <h3>Calculat the sum of following two numbers:</h3>
+                <h3 id="randomNumberDisplay1"></h3>
+                <script>showRandom();</script>
+                <button id="showSumButton" onclick="showSum()" class="w3-button w3-green">Show Sum</button>
+                <button id="tryAgainButton" onclick="tryAgain()" class="w3-button w3-green">Try Again</button>
+            </div>
+            <button onclick="this.parentElement.style.display='none'" class="w3-button w3-red w3-display-bottomright">x</button>
+        </div>
+            </div>
+        </div>
+        <footer class="w3-panel w3-card-4 w3-card- w3-border w3-hover-border-red">
+            <h2>For kids in primary school</h2>
+            <p>Kids want to do excellence in Mathematics.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html
