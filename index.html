@@ -5,29 +5,29 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="refress" content="30">
-    <meta name="keywords" content="HTML, CSS, W3.CSS">
+    <meta name="keywords" content="Primary Math Addition Add Sum Devide Substract Multiply multiplication">
     <meta name="description" content="Math Practice for kids in primary school">
     <title>Primary Math Practice</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/primarymath.js"></script> 
+    <script src="js/primarymath.js"></script>
 </head>
 
 <body>
     <div style="background-color: lightgray">
         <div id="page_header" class="w3-container w3-teal w3-center ">
-            <h1 id="header_name">Hey Kids, get ready for some math practice</h1>
+            <h1 id="header_name">Hey Kid, get ready for some math practice</h1>
         </div>
         <div class="w3-bar w3-light-gray w3-large">
-            <a href="#" class="w3-bar-item w3-button w3-hover-green">
+            <a href="#" class="w3-bar-item w3-button w3-hover-green" onclick="location.reload();">
                 <i class="fa fa-home"></i>
             </a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-green" onclick="document.getElementById('sum').style.display='block'">Sum</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-green">Multiply</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-green">Substract</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-green">Devide</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green" onclick="practiceSum();">Sum</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green" onclick="practiceMultiply();"> Multiply</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green" onclick="practiceSubtract();">Substract</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green" onclick="practiceDevide();">Devide</a>
             <div class="w3-dropdown-hover">
                 <button class="w3-button" title="More">More
                     <i class="fa fa-caret-down"></i>
@@ -36,22 +36,21 @@
                     <a href="#" class="w3-bar-item w3-button w3-hover-green">None</a>
                 </div>
             </div>
-            <input type=text class="w3-bar-item w3-input" placeholder="serach..">
-            <a href="#" class="w3-bar-tem w3-button w3-hover-green">Go</a>
+            <a id = "profile" href="#" class="w3-bar-item w3-button w3-hover-green" onclick="myName();">Profile</a>
         </div>
 
-        <div id="sum" background-color="#00cc00" class="w3-panel w3-display-container">
+        <div id="practiceArea" background-color="#00cc00" class="w3-panel w3-display-container">
             <div id="randomNumberDisplay" class="w3-panel w3-light-gray w3-display-container">
                 <h3 id = "time"></h3>
                 <h3 id="randomNumberDisplay1"></h3>
                 <script>
-                    showRandom();
-                    stopWatch();
+                    practiceSum();
                 </script>
-                <button id="showSumButton" onclick="showSum()" class="w3-button w3-green">Show Sum</button>
                 <button id="tryAgainButton" onclick="tryAgain()" class="w3-button w3-green">Try Again</button>
+                <button id="showSumButton" onclick="showAnswer()" class="w3-button w3-green">Show Answer</button>
             </div>
-            <button onclick="this.parentElement.style.display='none'" class="w3-button w3-red w3-display-bottomright">x</button>
+            <button onclick="this.parentElement.style.display='none'"
+            class="w3-button w3-red w3-display-bottomright">x</button>
         </div>
     </div>
     </div>
@@ -61,4 +60,4 @@
     </div>
 </body>
 
-</html>             
+</html>
