@@ -12,26 +12,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script>
-        let sum;
-        function showRandom() {
-            let num1 = Math.round(Math.random() * 100);
-            let num2 = Math.round(Math.random() * 100);
-            sum = num1 + num2;
-            document.getElementById("randomNumberDisplay1").innerHTML = num1 + " and " + num2;
-        }
-
-        function showSum() {
-            document.getElementById("showSumButton").innerHTML = "=" + sum;
-            documet.getElementById("tryAgainButton").style.display = 'block';
-        }
-        function tryAgain() {
-            document.getElementById('sum').style.display = 'block';
-            showRandom();
-            document.getElementById("showSumButton").innerHTML = 'Show Sum';
-            document.getElementById("sumDisplay").innerHTML = "Sum=?"
-        }
-    </script>
+    <script src="js/primarymath.js"></script> 
 </head>
 
 <body>
@@ -59,24 +40,25 @@
             <a href="#" class="w3-bar-tem w3-button w3-hover-green">Go</a>
         </div>
 
-        <div id="sum"  background-color="#00cc00" class="w3-panel w3-display-container">
+        <div id="sum" background-color="#00cc00" class="w3-panel w3-display-container">
             <div id="randomNumberDisplay" class="w3-panel w3-light-gray w3-display-container">
-                <h3>Calculat the sum of following two numbers:</h3>
+                <h3 id = "time"></h3>
                 <h3 id="randomNumberDisplay1"></h3>
-                <script>showRandom();</script>
+                <script>
+                    showRandom();
+                    stopWatch();
+                </script>
                 <button id="showSumButton" onclick="showSum()" class="w3-button w3-green">Show Sum</button>
                 <button id="tryAgainButton" onclick="tryAgain()" class="w3-button w3-green">Try Again</button>
             </div>
             <button onclick="this.parentElement.style.display='none'" class="w3-button w3-red w3-display-bottomright">x</button>
         </div>
-            </div>
-        </div>
-        <footer class="w3-panel w3-card-4 w3-card- w3-border w3-hover-border-red">
-            <h2>For kids in primary school</h2>
-            <p>Kids want to do excellence in Mathematics.</p>
-        </footer>
     </div>
-
+    </div>
+    <footer class="w3-panel w3-card-4 w3-card- w3-border w3-hover-border-red">
+        <h2>This page is for the kids in primary school who wants to do better in Mathematics</h2>
+    </footer>
+    </div>
 </body>
 
-</html
+</html>             
